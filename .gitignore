@@ -1,0 +1,16 @@
+# Ignora o cache do Gradle do projeto
+.gradle
+
+# Ignora arquivos de configuração do vscode
+.vscode
+
+# Ignora a pasta build dentro do app
+build
+
+# aplicações
+*.apk
+*.ap_
+
+# Arquivos gerados
+bin/
+gen/

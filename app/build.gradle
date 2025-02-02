@@ -1,0 +1,66 @@
+plugins {
+    alias libs.plugins.androidApplication
+}
+
+android {
+    compileSdkVersion 35
+    namespace = "org.example"
+    testNamespace = "org.example"
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        applicationId "org.example"
+        minSdkVersion 26
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res {
+                srcDir 'src/main/resources'
+            }
+            java {
+                srcDir 'src/main/java'
+            }
+        }
+        test {
+            java {
+                srcDir 'src/test/java'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    dependencies {
+        implementation (libs.androidxAppcompat)
+        implementation (libs.material)
+        implementation (libs.androidxCore)
+        testImplementation (libs.testng)
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+tasks.withType(Test) {
+    useTestNG()
+}
