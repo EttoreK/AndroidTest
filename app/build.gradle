@@ -1,66 +1,78 @@
+// Declaração dos plugins da app
 plugins {
-    alias libs.plugins.androidApplication
+    alias libs.plugins.androidApplication // plugin oficial para aplicações Android
 }
-
+// Definição das características do aplicativo
 android {
-    compileSdkVersion 35
-    namespace = "org.example"
-    testNamespace = "org.example"
-
+    namespace = "org.example" // identificador para o pacote do aplicativo
+    testNamespace = "org.example" // identificador para o pacote de testes do aplicativo
+    // Ativa a "view binding" para melhorar as views do aplicativo
     buildFeatures {
         viewBinding = true
     }
-
+    // Configurações padrão para o aplicativo Android
     defaultConfig {
-        applicationId "org.example"
-        minSdkVersion 26
-        targetSdkVersion 35
-        versionCode 1
-        versionName "1.0"
+        applicationId "org.example" // mesmo que o "namespace"
+        compileSdkVersion 35 // compatibilidade com APIs do Android
+        minSdkVersion 26 // versão Android mínima
+        targetSdkVersion 35 // versão Android principal
+        versionCode 1 // versão do código
+        versionName "1.0" // nome da versão do código
     }
-
+    // Controle de "builds" para o aplicativo
     buildTypes {
+        // Regras para a "release" do aplicativo
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false // minificação do código
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // regras de otimização
         }
     }
-
+    // Diretórios dos arquivos do aplicativo Android
     sourceSets {
+        // Código principal
         main {
+            // Recursos do código
             res {
-                srcDir 'src/main/resources'
+                srcDir 'src/main/resources' // androidx entende "res", porém o gradle cria "resources"
             }
+            // Códigos em java
             java {
-                srcDir 'src/main/java'
+                srcDir 'src/main/java' // declaração expliita do diretório java
             }
         }
+        // Códigos de teste
         test {
-            java {
-                srcDir 'src/test/java'
+            // Recursos do código
+            res {
+                srcDir 'src/test/resources' // androidx entende "res", porém o gradle cria "resoures"
             }
+            // Códigos em java
+            java {
+                srcDir 'src/test/java' // declaração expliita do diretório java
+            }
+            
         }
     }
-
+    // Versão java para compilar o código
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility JavaVersion.VERSION_21 // manter a compatibilidade com 
+        targetCompatibility JavaVersion.VERSION_21 // objetivo do app
     }
-
+    // Biblioteras para serem usadas no código
     dependencies {
-        implementation (libs.androidxAppcompat)
-        implementation (libs.material)
-        implementation (libs.androidxCore)
-        testImplementation (libs.testng)
+        implementation (libs.androidxAppcompat) // compatibilidade com versões antigas
+        implementation (libs.material) // experiência visual
+        implementation (libs.androidxCore) // conjunto de APIs para aplicativos
+        testImplementation (libs.testng) // framework do TestNG
     }
 }
-
+// Fontes para encontrar as bibliotecas requisitadas
 repositories {
-    google()
-    mavenCentral()
-    gradlePluginPortal()
+    google() // repositório official do Google
+    mavenCentral() // dependências de java e Android
+    gradlePluginPortal() // repositório oficial do Gradle
 }
-
+// Aplica tipo de test TestNG
 tasks.withType(Test) {
-    useTestNG()
+    useTestNG() // aplica o TestNG
 }

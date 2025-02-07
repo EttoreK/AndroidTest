@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- definição do arquivo como xml, definição da versão do arquivo e codificação do arquivo -->
+<!-- Define a estrutura do ícone e as camadas que o compõem -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"> <!-- permite usar atributos "android:" -->
+    <background android:drawable="@drawable/ic_launcher_background" /> <!-- camada de fundo -->
+    <foreground android:drawable="@drawable/ic_launcher_foreground" /> <!-- camada de primeiro plano -->
+    <monochrome android:drawable="@drawable/ic_launcher_monochrome" /> <!-- camada monocromática -->
+</adaptive-icon>

@@ -1,10 +1,18 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Arquivo de estilos do aplicativo -->
+<resources xmlns:tools="http://schemas.android.com/tools"> <!-- permite usar atributos "android:" no namespace tools -->
+    <!-- Estilo definido para um elemento -->
+    <!-- 
+        name é o identificador do elemento
+        parent é da classe de onde herda os atributos
+     -->
     <style 
-        name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        name="Theme.App" 
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
     </style>
-
-    <style name="Theme.App.NoActionBar" parent="Theme.App">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style 
+        name="Theme.App.NoActionBar" 
+        parent="Theme.App">
+        <item name="windowActionBar">false</item> <!-- barra de ação é desativada -->
+        <item name="windowNoTitle">true</item> <!-- esconde o título da janela -->
     </style>
 </resources>

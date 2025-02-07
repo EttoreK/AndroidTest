@@ -1,18 +1,21 @@
+// Administração de dependências
 pluginManagement {
+    // Aonde buscar para cumprir as dependências
     repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
+        google() // repositório oficial do google
+        mavenCentral() // dependências de java e android
+        gradlePluginPortal() // repositório oficial do gradle
     }
 }
-
+// Resolução de dependências
 dependencyResolutionManagement {
+    // Aonde buscar para cumprir as dependências
     repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
+        google() // repositório oficial do google
+        mavenCentral() // dependências de java e android
+        gradlePluginPortal() // repositório oficial do gradle
     }
 }
 
-rootProject.name = 'AndroidTest'
-include 'app'
+rootProject.name = 'AndroidTest' // nome da pasta do projeto / nome do aplicativo
+include 'app' // nome da pasta do código do app

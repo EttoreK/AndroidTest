@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?> <!-- definção do arquivo como xml, definição da versão do arquivo e codificação do arquivo -->
+<!-- Declara um vetor padronizado para o ícone do aplicativo "fundo" do vetor -->
+<vector 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"

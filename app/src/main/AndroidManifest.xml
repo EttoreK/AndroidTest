@@ -1,14 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?> <!-- definção do arquivo como xml, definição da versão do arquivo e codificação do arquivo -->
+<!-- Permite reconhecer como manifesto do android -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"> <!-- permite usar atributos "android:" -->
+    <!-- Configurações globais do apliativo -->
+    <!--
+        android:icon busca o ic_launcher nas pastas mipmaps
+        android:allowBakup permite que a google e a playstore façam bakup das onfigurações do apliativo
+        android:supportsRtl designs são da direita para a esquerda
+        android:theme busca por themas na pasta style
+    -->
     <application
-        android:icon="@mipmap/ic_laucher"
+        android:icon="@mipmap/ic_launcher"
         android:allowBackup="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
-        <activity android:exported="true" android:name=".App" android:theme="@style/Theme.App.NoActionBar">
+        <!-- Responsável por exibir a tela e inteagir com o usuário -->
+        <!-- 
+            android:exported permite o aplicativo ser iniciado por outros aplicativos
+            android:name nome da classe da ativity / ponto de partida da aplicação
+            android:theme remove a barra superior do applicativo
+         -->
+        <activity 
+            android:exported="true" 
+            android:name=".App" 
+            android:theme="@style/Theme.App.NoActionBar">
+            <!-- Quais intenções, mensagens, ações podem ser respondidas pelo aplicativo -->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" /> <!-- indica que essa activity é o ponto inicial do apliativo -->
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- idica que essa activity/aplicativo deve estar na lista de aplicativos do sistema -->
             </intent-filter>
         </activity>
     </application>

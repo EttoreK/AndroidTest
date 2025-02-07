@@ -1,15 +1,15 @@
-[versions]
-androidApplication = "8.8.0" #https://maven.google.com/web/index.html?#com.android.application:com.android.application.gradle.plugin
+[versions] # versão a ser usada de cada biblioteca ou "plugin" seguida pela fonte de origem
+androidApplication = "8.8.0" # https://maven.google.com/web/index.html?#com.android.application:com.android.application.gradle.plugin
 androidxAppcompat = "1.7.0" # https://mvnrepository.com/artifact/androidx.appcompat/appcompat
 androidxCore = "1.15.0" # https://mvnrepository.com/artifact/androidx.core/core
 material = "1.12.0" # https://mvnrepository.com/artifact/com.google.android.material/material
 testng = "7.10.2" # https://mvnrepository.com/artifact/org.testng/testng
 
-[libraries]
+[libraries] # declaração dos nomes das bibliotecas
 androidxAppcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppcompat"}
 androidxCore = { module = "androidx.core:core", version.ref = "androidxCore"}
 material = { module = "com.google.android.material:material", version.ref = "material"}
 testng = { module = "org.testng:testng", version.ref = "testng" } 
 
-[plugins]
+[plugins] # declaração dos "plugins"
 androidApplication = { id = "com.android.application", version.ref = "androidApplication" }
