@@ -3,14 +3,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"> <!-- permite usar atributos "android:" -->
     <!-- Configurações globais do apliativo -->
     <!--
-        android:icon busca o ic_launcher nas pastas mipmaps
         android:allowBakup permite que a google e a playstore façam bakup das onfigurações do apliativo
+        android:icon busca o ic_launcher nas pastas mipmaps
         android:supportsRtl designs são da direita para a esquerda
         android:theme busca por themas na pasta style
     -->
     <application
-        android:icon="@mipmap/ic_launcher"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <!-- Responsável por exibir a tela e inteagir com o usuário -->

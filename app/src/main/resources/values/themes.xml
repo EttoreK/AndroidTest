@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- definção do arquivo como xml, definição da versão do arquivo e codificação do arquivo -->
 <!-- Arquivo de estilos do aplicativo -->
 <resources xmlns:tools="http://schemas.android.com/tools"> <!-- permite usar atributos "android:" no namespace tools -->
     <!-- Estilo definido para um elemento -->

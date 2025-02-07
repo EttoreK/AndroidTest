@@ -4,20 +4,20 @@ plugins {
 }
 // Definição das características do aplicativo
 android {
-    namespace = "org.example" // identificador para o pacote do aplicativo
-    testNamespace = "org.example" // identificador para o pacote de testes do aplicativo
+    namespace = libs.versions.namespaceExemplo.get() // identificador para o pacote do aplicativo
+    testNamespace = libs.versions.namespaceExemplo.get() // identificador para o pacote de testes do aplicativo
     // Ativa a "view binding" para melhorar as views do aplicativo
     buildFeatures {
         viewBinding = true
     }
     // Configurações padrão para o aplicativo Android
     defaultConfig {
-        applicationId "org.example" // mesmo que o "namespace"
-        compileSdkVersion 35 // compatibilidade com APIs do Android
-        minSdkVersion 26 // versão Android mínima
-        targetSdkVersion 35 // versão Android principal
-        versionCode 1 // versão do código
-        versionName "1.0" // nome da versão do código
+        applicationId libs.versions.namespaceExemplo.get() // identificador na Google Play Store
+        compileSdkVersion libs.versions.sdkCompile.get().toInteger() // compatibilidade com APIs do Android
+        minSdkVersion libs.versions.sdkMin.get().toInteger() // versão Android mínima
+        targetSdkVersion libs.versions.sdkTarget.get().toInteger() // versão Android principal
+        versionCode libs.versions.versaoNumero.get().toInteger() // versão do código interpretado pela Google Play Store
+        versionName libs.versions.versaoNome.get() // nome da versão do código exibido aos usuários
     }
     // Controle de "builds" para o aplicativo
     buildTypes {
@@ -50,7 +50,6 @@ android {
             java {
                 srcDir 'src/test/java' // declaração expliita do diretório java
             }
-            
         }
     }
     // Versão java para compilar o código

@@ -3,7 +3,13 @@ androidApplication = "8.8.0" # https://maven.google.com/web/index.html?#com.andr
 androidxAppcompat = "1.7.0" # https://mvnrepository.com/artifact/androidx.appcompat/appcompat
 androidxCore = "1.15.0" # https://mvnrepository.com/artifact/androidx.core/core
 material = "1.12.0" # https://mvnrepository.com/artifact/com.google.android.material/material
+namespaceExemplo = "org.example" # nome padrão
+sdkCompile = "35" # https://developer.android.com/guide/topics/manifest/uses-sdk-element?hl=pt-br#target
+sdkMin = "26" # https://developer.android.com/guide/topics/manifest/uses-sdk-element?hl=pt-br#target
+sdkTarget = "35" # https://developer.android.com/guide/topics/manifest/uses-sdk-element?hl=pt-br#target
 testng = "7.10.2" # https://mvnrepository.com/artifact/org.testng/testng
+versaoNumero = "1" # inteiro
+versaoNome = "1.000.000.000" # string
 
 [libraries] # declaração dos nomes das bibliotecas
 androidxAppcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppcompat"}
