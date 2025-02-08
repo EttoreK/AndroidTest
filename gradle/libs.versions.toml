@@ -8,8 +8,8 @@ sdkCompile = "35" # https://developer.android.com/guide/topics/manifest/uses-sdk
 sdkMin = "26" # https://developer.android.com/guide/topics/manifest/uses-sdk-element?hl=pt-br#target
 sdkTarget = "35" # https://developer.android.com/guide/topics/manifest/uses-sdk-element?hl=pt-br#target
 testng = "7.10.2" # https://mvnrepository.com/artifact/org.testng/testng
-versaoNumero = "1" # inteiro
-versaoNome = "1.000.000.000" # string
+versaoNumero = "1" # inteiro para o Google Play Services
+versaoNome = "1.0" # string para a exibição
 
 [libraries] # declaração dos nomes das bibliotecas
 androidxAppcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppcompat"}
